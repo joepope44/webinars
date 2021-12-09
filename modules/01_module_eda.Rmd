@@ -1,0 +1,36 @@
+---
+title: 'Module 1: Connect to Data and Explore '
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(RSocrata) # connects to Socrata Open Data sources
+library(tigris) # connects to census data, shapefiles and more
+library(tidyverse) # data manipulation funpack 
+library(leaflet) # builds great maps 
+```
+
+# Project Setup, Connecting to APIs, Exploration
+
+Mission statement: Find a way to compare schools in New York state by common elements, such as demographic makeup, census data, academic performance, and any other metrics that might be relevant. 
+
+## Project setup and using renv 
+
+
+
+## Connecting to a API 
+
+## Hiding our token and login credentials with the .Renviron file 
+## Creating dataframes and checking data integrity amongst data sources 
+
+## Light EDA using glimpse, summary and gt 
+
+## Hands-on Activity/Exercise
+
+
