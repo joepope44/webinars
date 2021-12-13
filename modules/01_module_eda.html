@@ -249,21 +249,28 @@ div.tocify {
 <p>Mission statement: Find a way to compare schools in New York state by common elements, such as demographic makeup, census data, academic performance, and any other metrics that might be relevant.</p>
 <div id="project-setup-and-using-renv" class="section level2" number="1.1">
 <h2 number="1.1"><span class="header-section-number">1.1</span> Project setup and using renv</h2>
+<p>It is essential to start all work in R as a Project. This keeps all scripts and data sources in a self contained folder which is helpful for maintaining referential integrity and easy syncing to a remote github repo. Rstudio makes it very easy to work with Projects, and users should take notice.</p>
+<p><code>renv</code> is a library that creates a virtual environment for your R project. In contrast to some of my experiences in python, this virtual environment is fairly painless. After installing and running renv, the user gets a lockfile that keeps track of all libraries and versions. This is a big deal when it comes to reproducing results and getting the script to work on someone else’s computer.</p>
 </div>
 <div id="connecting-to-a-api" class="section level2" number="1.2">
 <h2 number="1.2"><span class="header-section-number">1.2</span> Connecting to a API</h2>
+<p>For this project, we want to connect to Socrata and download open source data. Socrata provides multiple ways to do this. It is possible to obtain data via:</p>
+<ol style="list-style-type: decimal">
+<li>Export as csv and load into R</li>
+<li>Export as json or other formats and load into R</li>
+<li>Connect to Socrata Open Data API (SODA API). This allows a user to connect with an API endpoint and filter, query, and aggregate data by manipulating a URL string.</li>
+<li>Connect to OData v4. A user can connect directly to Excel or Tableau with this method.</li>
+</ol>
+<p>We will use method 3, and connect via the SODA API endpoint. If we import data into our R Project from a downloaded file, we risk using outdated data if it is later updated. Using an API connection ensures that we are always using the most updated data.</p>
 </div>
-<div id="hiding-our-token-and-login-credentials-with-the-.renviron-file" class="section level2" number="1.3">
-<h2 number="1.3"><span class="header-section-number">1.3</span> Hiding our token and login credentials with the .Renviron file</h2>
+<div id="creating-dataframes-and-checking-data-integrity-amongst-data-sources" class="section level2" number="1.3">
+<h2 number="1.3"><span class="header-section-number">1.3</span> Creating dataframes and checking data integrity amongst data sources</h2>
 </div>
-<div id="creating-dataframes-and-checking-data-integrity-amongst-data-sources" class="section level2" number="1.4">
-<h2 number="1.4"><span class="header-section-number">1.4</span> Creating dataframes and checking data integrity amongst data sources</h2>
+<div id="light-eda-using-glimpse-summary-and-gt" class="section level2" number="1.4">
+<h2 number="1.4"><span class="header-section-number">1.4</span> Light EDA using glimpse, summary and gt</h2>
 </div>
-<div id="light-eda-using-glimpse-summary-and-gt" class="section level2" number="1.5">
-<h2 number="1.5"><span class="header-section-number">1.5</span> Light EDA using glimpse, summary and gt</h2>
-</div>
-<div id="hands-on-activityexercise" class="section level2" number="1.6">
-<h2 number="1.6"><span class="header-section-number">1.6</span> Hands-on Activity/Exercise</h2>
+<div id="hands-on-activityexercise" class="section level2" number="1.5">
+<h2 number="1.5"><span class="header-section-number">1.5</span> Hands-on Activity/Exercise</h2>
 </div>
 </div>
 

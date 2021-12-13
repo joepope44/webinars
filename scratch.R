@@ -18,7 +18,7 @@ school_quality_df <- RSocrata::read.socrata(.url)
 school_safety_df <- RSocrata::read.socrata(.url)
 
 # Note - it is possible to use filters in api calls, but perhaps not necessary when dealing 
-# with small datasets 
+# with small datasets s
 
 # Math Test Results 
 # https://data.cityofnewyork.us/Education/2013-2019-Math-Test-Results-Charter-School/3xsw-bpuy
